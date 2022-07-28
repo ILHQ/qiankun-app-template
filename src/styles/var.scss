@@ -1,0 +1,26 @@
+$white: #ffffff;
+$blue: #1677ff;
+$lightBlue: #1ce4ff;
+$red: #fe3824;
+$green: #67c23a;
+$orange: #ff9100;
+$purple: #869ef3;
+$black: #000000;
+$gray: #9094a3;
+$disabled: #bbbfc7;
+$border: #f1f2f3;
+$fontColor: #333333;
+$bgColor: #050e20;
+
+/*导出*/
+:export {
+  white: $white;
+  blue: $blue;
+  red: $red;
+  green: $green;
+  purple: $purple;
+  orange: $orange;
+  gray: $gray;
+  bgColor: $bgColor;
+  lightBlue: $lightBlue;
+}

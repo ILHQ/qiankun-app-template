@@ -1,0 +1,31 @@
+/* element主题色变量 详见https://element.eleme.cn/#/zh-CN/theme/preview*/
+@import './var.scss';
+$--color-primary: $blue;
+$--color-white: #1b2740;
+$--color-text-regular: #ffffff;
+$--color-text-primary: #ffffff;
+$--background-color-base: rgba(159, 190, 251, 0.6);
+$--border-color-extra-light: rgba(159, 190, 251, 0.6);
+
+$--table-border-color: transparent;
+$--table-font-color: $white;
+$--table-header-background-color: $black;
+$--table-row-hover-background-color: transparent;
+
+$--pagination-background-color: $black;
+$--pagination-font-color: $black;
+
+$--radio-button-checked-font-color: $gray;
+$--radio-button-checked-border-color: #9fbefb;
+$--radio-button-checked-background-color: rgba(159, 190, 251, 0.2);
+
+$--input-background-color: $bgColor;
+
+$--dialog-background-color: rgba(0, 0, 0, 0.9);
+
+$--table-row-hover-background-color: rgba(159, 190, 251, 0.3);
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import '~element-ui/packages/theme-chalk/src/index';

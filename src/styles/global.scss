@@ -1,0 +1,400 @@
+@import '~@/styles/element_dark.scss';
+@import '~@/styles/var.scss';
+@import '~@/styles/mixin.scss';
+
+header,
+footer,
+section,
+aside,
+article,
+nav,
+hgroup,
+figure,
+figcaption,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+form,
+p,
+dl,
+dt,
+dd,
+blockquote,
+legend,
+table,
+th,
+td,
+fieldset,
+menu,
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  box-shadow: 0 0 0 1000px $white inset;
+}
+
+select {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+}
+
+input[type='password']:focus {
+  box-shadow: 0 0 0 1000px $white inset;
+}
+
+div,
+ul,
+p {
+  box-sizing: border-box;
+}
+
+textarea:disabled,
+input:disabled {
+  background: none;
+}
+
+/*行内块元素*/
+input,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  font-size: 18px;
+  outline-style: none;
+  vertical-align: bottom;
+}
+
+img {
+  content: none !important;
+}
+
+/*单选框和复选框的配置*/
+input[type='radio'],
+input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  display: none;
+}
+
+input[type='date'] {
+  background: none;
+  outline: none;
+  text-align: right;
+  display: inline-block;
+  font-size: 18px;
+
+  &::-webkit-clear-button {
+    display: none;
+  }
+
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  &::-webkit-clear-button {
+    display: none;
+  }
+}
+
+textarea {
+  /* 边框清零 */
+  border: none;
+  /* 轮廓线清零 */
+  outline: none;
+  /* 防止文本域被随意拖拽 */
+  resize: none;
+}
+
+html body {
+  color: $white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC',
+    'WenQuanYi Micro Hei', sans-serif !important;
+  font-size: 14px;
+  background-color: $bgColor;
+  box-sizing: border-box;
+}
+
+a {
+  color: $white;
+  outline: none;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.colorDefault {
+  color: $fontColor;
+}
+
+.colorWhite {
+  color: $white;
+}
+
+.colorRed {
+  color: $red;
+}
+
+.colorOrange {
+  color: $orange;
+}
+
+.colorGreen {
+  color: $green;
+}
+
+.colorBlue {
+  color: $blue;
+}
+
+.colorLightBlue {
+  color: $lightBlue;
+}
+
+.colorPurple {
+  color: $purple;
+}
+
+.amap-logo {
+  display: none !important;
+}
+
+.amap-copyright {
+  display: none !important;
+}
+
+@for $i from 1 through 100 {
+  .m-#{$i} {
+    margin: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .mt-#{$i} {
+    margin-top: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .mr-#{$i} {
+    margin-right: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .ml-#{$i} {
+    margin-left: #{$i}px;
+  }
+}
+
+.m-0-auto {
+  margin: 0 auto;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+@for $i from 1 through 100 {
+  .p-#{$i} {
+    margin: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .pt-#{$i} {
+    margin-top: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .pr-#{$i} {
+    margin-right: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .pb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .pl-#{$i} {
+    margin-left: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .text-#{$i} {
+    font-size: #{$i}px;
+  }
+}
+
+.w-full {
+  width: 100%;
+}
+
+@for $i from 1 through 12 {
+  .w-#{$i}\/12 {
+    width: #{$i / 12 * 100}px;
+  }
+}
+
+@for $i from 1 through 800 {
+  .w-#{$i} {
+    width: #{$i}px;
+  }
+}
+
+.h-full {
+  height: 100%;
+}
+
+@for $i from 1 through 12 {
+  .h-#{$i}\/12 {
+    height: #{$i / 12 * 100}px;
+  }
+}
+
+@for $i from 1 through 800 {
+  .h-#{$i} {
+    height: #{$i}px;
+  }
+}
+
+@for $i from 0 through 180 {
+  .rotate-#{$i} {
+    transform: rotate(#{$i}deg);
+  }
+}
+
+@for $i from 1 through 180 {
+  .-rotate-#{$i} {
+    transform: rotate(-#{$i}deg);
+  }
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+
+  &.items-start {
+    align-items: flex-start;
+  }
+
+  &.items-end {
+    align-items: flex-end;
+  }
+
+  &.items-center {
+    align-items: center;
+  }
+
+  &.items-baseline {
+    align-items: baseline;
+  }
+
+  &.items-stretch {
+    align-items: stretch;
+  }
+
+  &.justify-start {
+    justify-content: flex-start;
+  }
+
+  &.justify-end {
+    justify-content: flex-end;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.justify-between {
+    justify-content: space-between;
+  }
+
+  &.justify-around {
+    justify-content: space-around;
+  }
+
+  &.justify-evenly {
+    justify-content: space-evenly;
+  }
+
+  &.flex-shrink-0 {
+    flex-shrink: 0;
+  }
+
+  &.flex-shrink {
+    flex-shrink: 1;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
