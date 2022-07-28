@@ -11,13 +11,11 @@
 </template>
 <script>
 import { mapMutations } from 'vuex';
-import { getRealUrl } from '@/lib/common';
 
 export default {
   name: 'App',
   data() {
     return {
-      getRealUrl,
       appId: process.env.VUE_APP_NAME,
       scale: 1,
       screenshot: {

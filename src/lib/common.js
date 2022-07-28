@@ -225,17 +225,3 @@ export const VueXssOptions = {
   stripIgnoreTagBody: ['script', 'style'],
   css: false,
 };
-
-/**
- * 获取在当前项目里的真实路径前
- */
-export function getRealUrl(url) {
-  let baseUrl = '';
-  if (window.__POWERED_BY_QIANKUN__) {
-    baseUrl =
-      process.env.NODE_ENV === 'production'
-        ? `/${process.env.VUE_APP_MAIN_APP_NAME}/${process.env.VUE_APP_NAME}`
-        : `/${process.env.VUE_APP_NAME}`;
-  }
-  return `${baseUrl}${url}`;
-}

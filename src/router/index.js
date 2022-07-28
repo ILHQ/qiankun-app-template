@@ -1,16 +1,15 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import { getRealUrl } from '@/lib/common';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: getRealUrl('/'),
-    redirect: getRealUrl('/index'),
+    path: '/',
+    redirect: '/index',
   },
   {
-    path: getRealUrl('/index'),
+    path: '/index',
     name: 'Index',
     component: () => import('@/pages/index/index'),
     meta: { title: '子应用' },
@@ -19,7 +18,9 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.VUE_APP_BASE_URL,
+  base: window.__POWERED_BY_QIANKUN__
+    ? `/${process.env.VUE_APP_NAME}/`
+    : process.env.VUE_APP_BASE_URL,
   routes,
 });
 
